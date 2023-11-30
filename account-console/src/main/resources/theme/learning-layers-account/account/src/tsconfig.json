@@ -1,22 +1,11 @@
 {
+  "extends": "../../../../../../../../js/tsconfig.json",
+  "include": ["app"],
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "noEmit": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": [ "es2015", "dom", "dom.iterable" ],
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "jsx": "react",
     "suppressImplicitAnyIndexErrors": true,
-    "skipLibCheck": true
-  },
-  "include": [
-    "./app/**/*.ts?"
-  ],
+    "ignoreDeprecations": "5.0",
+    "jsx": "react"
+  }
   "files": [
     "../../../../../../../../adapters/oidc/js/src/main/resources/keycloak.d.ts"
   ]

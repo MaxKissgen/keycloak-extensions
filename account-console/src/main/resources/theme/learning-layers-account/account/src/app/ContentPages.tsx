@@ -165,7 +165,7 @@ export function makeRoutes(): React.ReactNode {
             if(page.urlParameter !== undefined) {
                 return <Route key={page.itemId} path={'/' + page.path + page.urlParameter} render={() => node} />;
             } else {
-                return <Route key={page.itemId} path={'/' + page.path} exact render={() => node}/>;
+                return <Route key={page.itemId} path={'/' + page.path} exact render={() => node} />;
             }
         } else {
             const pageDef: ComponentPageDef = page as ComponentPageDef;

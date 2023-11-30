@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import Keycloak, { KeycloakLoginOptions } from "../../../../../../../../../../adapters/oidc/js/src/main/resources/keycloak";
+import Keycloak, { KeycloakLoginOptions } from "../../../../../../../../../../js/src/main/resources/keycloak";
 
 declare const baseUrl: string;
 export type KeycloakClient = Keycloak;
@@ -64,10 +64,10 @@ export class KeycloakService {
             if (this.keycloakAuth.token) {
                 this.keycloakAuth
                     .updateToken(5)
-                    .success(() => {
+                    .then(() => {
                         resolve(this.keycloakAuth.token as string);
                     })
-                    .error(() => {
+                    .catch(() => {
                         reject('Failed to refresh token');
                     });
             } else {
